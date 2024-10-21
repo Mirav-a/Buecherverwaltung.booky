@@ -1,2 +1,2 @@
-# B-cherverwaltung.booky
+# Buecherverwaltung.booky
 Gebrauchtbücher verkaufen
