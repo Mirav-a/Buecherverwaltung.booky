@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bücherliste</title>
+    <!-- Link zum CSS-Stylesheet -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Liste der Bücher</h1>
+<table border="1">
+    <tr>
+        <th>Titel</th>
+        <th>Autor</th>
+        <th>Jahr</th>
+    </tr>
+    <!-- Thymeleaf verwendet, um die Bücherliste dynamisch zu rendern -->
+    <tr th:each="booky : ${bookies}">
+        <td th:text="${booky.title}"></td>
+        <td th:text="${booky.author}"></td>
+        <td th:text="${booky.year}"></td>
+    </tr>
+</table>
+</body>
+</html>
