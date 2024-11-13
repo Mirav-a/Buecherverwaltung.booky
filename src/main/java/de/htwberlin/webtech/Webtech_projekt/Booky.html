@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="de" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bücherliste</title>
-    <!-- Link zum CSS-Stylesheet -->
-    <link rel="stylesheet" href="/styles.css">
+    <title>Bücher Verwaltung - Booky</title>
+    <link rel="stylesheet" href="booky.css">
+    <script src="booky.js" defer></script>
 </head>
 <body>
-<h1>Liste der Bücher</h1>
-<table border="1">
-    <tr>
-        <th>Titel</th>
-        <th>Autor</th>
-        <th>Jahr</th>
-    </tr>
-    <!-- Thymeleaf verwendet, um die Bücherliste dynamisch zu rendern -->
-    <tr th:each="booky : ${bookies}">
-        <td th:text="${booky.title}"></td>
-        <td th:text="${booky.author}"></td>
-        <td th:text="${booky.year}"></td>
-    </tr>
-</table>
+<header>
+    <h1>Bücher Verwaltung - Booky</h1>
+    <nav>
+        <ul>
+            <li><a href="Booky.html">Startseite</a></li>
+            <li><a href="login.html">Anmelden</a></li>
+            <li><a href="register.html">Registrieren</a></li>
+            <li><a href="zahlung.html">Zahlung</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="search-section">
+        <input type="text" placeholder="Suche nach Büchern..." class="search-bar" id="searchInput">
+        <button class="search-button" onclick="searchBooks()">Suche</button>
+    </section>
+
+    <section class="book-list" id="bookList">
+        <h2>Neu geladene Bücher</h2>
+        <!-- Dynamisch durch JavaScript hinzugefügt -->
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Booky. Alle Rechte vorbehalten.</p>
+</footer>
 </body>
 </html>
