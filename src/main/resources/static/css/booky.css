@@ -19,27 +19,6 @@ header {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #4a403a;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px;
-}
-
 .search-section {
     display: flex;
     justify-content: center;

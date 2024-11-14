@@ -1,4 +1,5 @@
 package de.htwberlin.webtech.Webtech_projekt;
+
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,5 +44,14 @@ public class BookyService {
             }
         }
         return false;
+    }
+
+    // Neue Methode, um Buchdetails zu erhalten
+    public String getBookDetails() {
+        if (!books.isEmpty()) {
+            Booky book = books.get(0); // Beispielhaft das erste Buch nehmen
+            return "Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", Price: " + book.getPrice();
+        }
+        return "No book available";
     }
 }
