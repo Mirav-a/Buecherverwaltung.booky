@@ -1,9 +1,15 @@
 package de.htwberlin.webtech.Webtech_projekt;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BookyHtmlController {
+
+    @GetMapping("/Booky")
+    public String getHomePage() {
+        return "Booky";  // Gibt die Booky.html zurück, die im resources/templates Ordner liegen sollte
+    }
 
     @GetMapping("/")
     public String home() {
@@ -24,4 +30,6 @@ public class BookyHtmlController {
     public String zahlung() {
         return "zahlung"; // Verweist auf zahlung.html
     }
+
+    // Entferne zusätzliche Methoden mit demselben Pfad "/Booky"
 }
