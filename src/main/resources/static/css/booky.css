@@ -1,15 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 body {
     background-color: #f5e6d4;
     color: #4a403a;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 header {
@@ -60,6 +54,12 @@ header {
     width: 200px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .buy-button {

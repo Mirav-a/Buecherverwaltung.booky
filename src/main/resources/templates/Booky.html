@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bücherverwaltung - Booky</title>
-    <link rel="stylesheet" href="/static/css/booky.css"> <!-- Pfad zu CSS korrigiert -->
+    <link rel="stylesheet" href="/static/css/booky.css">
 </head>
 <body>
 <header>
@@ -15,11 +15,40 @@
     </nav>
 </header>
 <main>
-    <div id="bookList" class="book-list"></div>
+    <div id="bookList" class="book-list">
+        <!-- Bücher Beispiel-Liste -->
+        <div class="book">
+            <img src="/static/images/ringe.jpg" alt="Der Herr der Ringe" class="book-image">
+            <h3>Der Herr der Ringe</h3>
+            <p>Autor: J.R.R. Tolkien</p>
+            <p>Preis: 15.99 €</p>
+            <p>Epischer Fantasy-Roman</p>
+            <p>Verkäufer: Sofia Widermeier</p>
+            <button onclick="buyBook(1)" class="buy-button">Kaufen</button>
+        </div>
+        <div class="book">
+            <img src="/static/images/harrypotter.jpg" alt="Harry Potter" class="book-image">
+            <h3>Harry Potter und der Stein der Weisen</h3>
+            <p>Autor: J.K. Rowling</p>
+            <p>Preis: 12.49 €</p>
+            <p>Fantasy-Geschichte über einen jungen Zauberer</p>
+            <p>Verkäufer: Bella Taschenberger</p>
+            <button onclick="buyBook(2)" class="buy-button">Kaufen</button>
+        </div>
+        <div class="book">
+            <img src="/static/images/verwandlung.jpg" alt="Die Verwandlung" class="book-image">
+            <h3>Die Verwandlung</h3>
+            <p>Autor: Franz Kafka</p>
+            <p>Preis: 8.99 €</p>
+            <p>Klassischer Roman über die Verwandlung eines Mannes</p>
+            <p>Verkäufer: Louisa Müller</p>
+            <button onclick="buyBook(3)" class="buy-button">Kaufen</button>
+        </div>
+    </div>
 </main>
 <footer>
     <p>&copy; 2024 Booky. Alle Rechte vorbehalten.</p>
 </footer>
-<script src="/static/js/booky.js" defer></script> <!-- Pfad zu JS korrigiert -->
+<script src="/static/js/booky.js" defer></script>
 </body>
 </html>
