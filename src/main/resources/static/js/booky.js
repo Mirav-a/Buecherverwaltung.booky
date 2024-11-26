@@ -29,7 +29,7 @@ function loadBooks() {
 function searchBooks() {
     const query = document.getElementById('searchInput').value;
     fetch(`/Booky/api/books/search?query=${query}`)
-.then(response => response.json())
+        .then(response => response.json())
         .then(data => {
             const bookList = document.getElementById('bookList');
             bookList.innerHTML = '';
