@@ -39,9 +39,10 @@ public class WebtechProjektApplicationTests {
 
 	@Test
 	public void testGetBooky() throws Exception {
-		// Test den Controller
-		mockMvc.perform(get("/Booky"))
+		// Test den existierenden Controller-Endpunkt
+		mockMvc.perform(get(""))
 				.andExpect(status().isOk())
 				.andExpect(content().string("Booky - Willkommen bei Booky!")); // Überprüfe die erwartete Rückgabe
 	}
+
 }
