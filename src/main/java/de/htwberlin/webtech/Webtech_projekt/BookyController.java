@@ -38,7 +38,7 @@ public class BookyController {
     }
 
     // Der Endpunkt, den du testen möchtest
-    @GetMapping
+    @GetMapping ()
     public String getBooky() {
         return "Booky - Willkommen bei Booky!"; // Gib eine einfache Nachricht zurück, die auch im Test geprüft werden kann
     }
