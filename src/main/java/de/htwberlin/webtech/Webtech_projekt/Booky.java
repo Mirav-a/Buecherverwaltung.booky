@@ -6,7 +6,6 @@ public class Booky {
     private String author;
     private double price;
 
-    // Konstruktor
     public Booky(int id, String title, String author, double price) {
         this.id = id;
         this.title = title;
@@ -14,7 +13,6 @@ public class Booky {
         this.price = price;
     }
 
-    // Getter und Setter
     public int getId() {
         return id;
     }

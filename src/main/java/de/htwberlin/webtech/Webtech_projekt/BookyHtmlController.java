@@ -1,4 +1,5 @@
 package de.htwberlin.webtech.Webtech_projekt;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -7,21 +8,21 @@ public class BookyHtmlController {
 
     @GetMapping("/")
     public String home() {
-        return "Booky"; // Verweist auf Booky.html
+        return "Booky"; // Änderung: View muss in templates vorhanden sein
     }
 
     @GetMapping("/login")
     public String login() {
-        return "login"; // Verweist auf login.html
+        return "login"; // Änderung: View muss in templates vorhanden sein
     }
 
     @GetMapping("/register")
     public String register() {
-        return "register"; // Verweist auf register.html
+        return "register"; // Änderung: View muss in templates vorhanden sein
     }
 
     @GetMapping("/zahlung")
     public String zahlung() {
-        return "zahlung"; // Verweist auf zahlung.html
+        return "zahlung"; // Änderung: View muss in templates vorhanden sein
     }
 }
