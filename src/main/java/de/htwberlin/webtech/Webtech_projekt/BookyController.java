@@ -37,7 +37,7 @@ public class BookyController {
         return result;
     }
 
-    @GetMapping // Änderung: Route explizit leer gelassen
+    @GetMapping() // Änderung: Route explizit leer gelassen
     public String getBooky() {
         return "Booky - Willkommen bei Booky!";
     }
