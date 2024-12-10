@@ -1,0 +1,14 @@
+### Add a new Thing
+POST http://localhost:8080/api/things
+Content-Type: application/json
+
+{
+  "name": "Kabel",
+  "price": 50
+}
+
+### Get All Things
+GET http://localhost:8080/api/things
+
+### Get a Thing by ID
+GET http://localhost:8080/api/things/1

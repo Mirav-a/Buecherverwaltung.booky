@@ -42,4 +42,10 @@ public class BookyController {
         return "Booky - Willkommen bei Booky!";
     }
 
+    @GetMapping("/test-db")
+    public String testDbConnection() {
+        System.out.println("Endpunkt wurde aufgerufen!");
+        return "Database connected successfully!";
+    }
+
 }

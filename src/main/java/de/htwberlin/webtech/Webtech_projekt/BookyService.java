@@ -1,11 +1,13 @@
 package de.htwberlin.webtech.Webtech_projekt;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class BookyService {
+
 
     // Beispiel-Datenbank (kann später durch eine echte Datenbank ersetzt werden)
     private List<Booky> books = new ArrayList<>();
