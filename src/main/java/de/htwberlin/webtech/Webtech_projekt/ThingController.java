@@ -1,37 +1,36 @@
 package de.htwberlin.webtech.Webtech_projekt;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 @RequestMapping("/api/things") // Updated base path
 public class ThingController {
 
-    private List<Thing> things = new ArrayList<>();
-    private AtomicInteger idCounter = new AtomicInteger(1);
+    @Autowired
+    private BookyRepository bookyRepository;
+
+    public ThingController(BookyRepository bookyRepository) {
+        this.bookyRepository = bookyRepository;
+    }
 
     @PostMapping
     public Thing addThing(@RequestBody Thing thing) {
-        thing.setId(idCounter.getAndIncrement());
-        things.add(thing);
-        return thing;
+        return bookyRepository.save(thing); // Save to database
     }
 
     @GetMapping("/{id}")
-    public Thing getThing(@PathVariable int id) {
-        return things.stream()
-                .filter(thing -> thing.getId() == id)
-                .findFirst()
+    public Thing getThing(@PathVariable Long id) {
+        return bookyRepository.findById(id) // Retrieve from database
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Thing not found"));
     }
 
     @GetMapping
     public List<Thing> getAllThings() {
-        return things;
+        return bookyRepository.findAll(); // Retrieve all from database
     }
 }
