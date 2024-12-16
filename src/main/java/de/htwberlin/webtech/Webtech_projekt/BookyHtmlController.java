@@ -10,6 +10,7 @@ public class BookyHtmlController {
         return "Booky"; // Verweist auf Booky.html
     }
 
+
     @GetMapping("/login")
     public String login() {
         return "login"; // Verweist auf login.html
@@ -24,4 +25,5 @@ public class BookyHtmlController {
     public String zahlung() {
         return "zahlung"; // Verweist auf zahlung.html
     }
+
 }

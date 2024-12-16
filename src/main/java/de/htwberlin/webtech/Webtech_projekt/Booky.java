@@ -1,5 +1,15 @@
 package de.htwberlin.webtech.Webtech_projekt;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@NoArgsConstructor
+@Getter
+@Setter
+
 public class Booky {
     private int id;
     private String title;
