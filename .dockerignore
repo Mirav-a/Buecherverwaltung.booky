@@ -1,0 +1,20 @@
+# Java/Gradle spezifische Dateien
+build/
+.gradle/
+
+# IntelliJ IDEA spezifische Dateien
+.idea/
+*.iml
+
+# Allgemeine unnötige Dateien
+*.log
+*.class
+*.tmp
+.DS_Store
+
+# Node.js spezifische Dateien (falls vorhanden)
+
+
+# Andere temporäre Dateien
+*.bak
+*.swp
