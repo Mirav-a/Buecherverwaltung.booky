@@ -11,7 +11,12 @@ RUN gradle build --no-daemon -x test
 ## Package Stage ##
 FROM eclipse-temurin:21-jdk-jammy
 COPY --from=build /home/gradle/src/build/libs/Webtech-projekt-0.0.1-SNAPSHOT.jar app.jar
-# Ensure the application.properties file is included
-COPY src/main/resources/application.properties /home/gradle/src/main/resources/
 
+# Set environment variables for PostgreSQL (optional)
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-ctep28rtq21c73bn31og-a.frankfurt-postgres.render.com:5432/booky_db_yktd
+ENV SPRING_DATASOURCE_USERNAME=booky_db_yktd_user
+ENV SPRING_DATASOURCE_PASSWORD=XdafV5rxezyEC9MnFnMkDpNZEicFzyre
+ENV SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
+
+# Start the application
 ENTRYPOINT ["java","-jar","/app.jar"]

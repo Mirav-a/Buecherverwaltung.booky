@@ -12,6 +12,11 @@ public class Thing {
     private String name;
     private int price;
 
+
+    // Standardkonstruktor (erforderlich für Hibernate)
+    public Thing() {
+    }
+
     // Constructor
     public Thing(int id, String name, int price) {
         this.id = id;

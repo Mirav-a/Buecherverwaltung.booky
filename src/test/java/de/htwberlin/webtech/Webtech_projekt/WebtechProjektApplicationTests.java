@@ -1,30 +1,17 @@
 package de.htwberlin.webtech.Webtech_projekt;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.junit.jupiter.api.extension.ExtendWith;
-
-import de.htwberlin.webtech.Webtech_projekt.BookyController;
-import de.htwberlin.webtech.Webtech_projekt.BookyService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.mockito.Mockito.when;
 
-
-
-@SpringBootTest
-@ExtendWith(SpringExtension.class)
-@WebMvcTest(BookyController.class)
+@WebMvcTest(BookyController.class) // Testet nur den BookyController
 public class WebtechProjektApplicationTests {
 
 	@Autowired
@@ -33,20 +20,14 @@ public class WebtechProjektApplicationTests {
 	@MockBean
 	private BookyService bookyService;
 
-	@TestConfiguration
-	static class TestConfig {
-		@Bean
-		public BookyService bookyService() {
-			return new BookyService();
-		}
-	}
-
 	@Test
 	public void testGetBooky() throws Exception {
-		// Test den existierenden Controller-Endpunkt
-		mockMvc.perform(get(""))
-				.andExpect(status().isOk())
-				.andExpect(content().string("Booky - Willkommen bei Booky!")); // Überprüfe die erwartete Rückgabe
-	}
+		// Simuliere das Verhalten des Service
+		Mockito.when(bookyService.toString()).thenReturn("Booky - Willkommen bei Booky!");
 
+		// Teste den Controller-Endpunkt
+		mockMvc.perform(get("/api")) // Pfad des Controllers
+				.andExpect(status().isOk()) // Erwarteter Status
+				.andExpect(content().string("Booky - Willkommen bei Booky!")); // Erwarteter Inhalt
+	}
 }
