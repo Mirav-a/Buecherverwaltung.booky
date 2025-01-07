@@ -20,3 +20,4 @@ ENV SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
 
 # Start the application
 ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080

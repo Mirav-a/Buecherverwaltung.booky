@@ -1,14 +1,15 @@
-### Add a new Thing
-POST http://localhost:8080/api/things
+### Add a new Book
+POST http://localhost:8080/api/books
 Content-Type: application/json
 
 {
-  "name": "Kabel",
+  "title": "Kabel",
+  "author": "sam",
   "price": 50
 }
 
 ### Get All Things
-GET http://localhost:8080/api/things
+GET http://localhost:8080/api/books
 
 ### Get a Thing by ID
-GET http://localhost:8080/api/things/1
+GET http://localhost:8080/api/books/1

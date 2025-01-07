@@ -1,19 +1,22 @@
-package de.htwberlin.webtech.Webtech_projekt;
+package de.htwberlin.webtech.Webtech_projekt.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 @Entity
+@Table(name = "thing") // Maps the class to the "thing" table in the database
 public class Thing {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increment ID
     private int id;
+
+    @Column(nullable = false) // Name column cannot be null
     private String name;
+
+    @Column(nullable = false) // Price column cannot be null
     private int price;
 
-
-    // Standardkonstruktor (erforderlich für Hibernate)
+    // Default constructor (required by Hibernate)
     public Thing() {
     }
 
@@ -24,7 +27,7 @@ public class Thing {
         this.price = price;
     }
 
-    // Getter und Setter
+    // Getter and Setter methods
     public int getId() {
         return id;
     }

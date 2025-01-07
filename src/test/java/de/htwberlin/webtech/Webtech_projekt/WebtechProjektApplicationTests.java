@@ -1,5 +1,7 @@
 package de.htwberlin.webtech.Webtech_projekt;
 
+import de.htwberlin.webtech.Webtech_projekt.Controller.BookyController;
+import de.htwberlin.webtech.Webtech_projekt.Service.BookyService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
