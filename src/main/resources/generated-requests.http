@@ -8,8 +8,8 @@ Content-Type: application/json
   "price": 50
 }
 
-### Get All Things
+### Get All Books
 GET http://localhost:8080/api/books
 
-### Get a Thing by ID
+### Get a Book by ID
 GET http://localhost:8080/api/books/1
