@@ -5,12 +5,13 @@ import de.htwberlin.webtech.Webtech_projekt.Repository.BookyRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/books")
-@CrossOrigin(origins = "http://localhost:5177")
+@CrossOrigin(origins = {"http://localhost:5173/","https://buecherverwaltung-frontend.onrender.com"})
+
 public class BookyController {
 
     private final BookyRepository bookyRepository;
@@ -47,8 +48,11 @@ public class BookyController {
     // Add a new Booky
     @PostMapping
     public ResponseEntity<Booky> addBooky(@RequestBody Booky booky) {
-        Booky savedBooky = bookyRepository.save(booky);
-        return new ResponseEntity<>(savedBooky, HttpStatus.CREATED);
+        if (booky.getTitle() == null || booky.getAuthor() == null) {
+            return ResponseEntity.badRequest().build();
+        }
+        Booky savedBook = bookyRepository.save(booky);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedBook);
     }
 
     // Update an existing book

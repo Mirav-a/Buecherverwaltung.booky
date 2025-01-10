@@ -1,5 +1,5 @@
 ### Add a new Book
-POST http://localhost:8080/api/books
+POST http://localhost:5173/api/books
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ### Get All Books
-GET http://localhost:8080/api/books
+GET http://localhost:5173/api/books
 
 ### Get a Book by ID
-GET http://localhost:8080/api/books/1
+GET http://localhost:5173/api/books/1
