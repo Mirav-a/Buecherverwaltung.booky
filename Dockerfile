@@ -13,9 +13,9 @@ FROM eclipse-temurin:21-jdk-jammy
 COPY --from=build /home/gradle/src/build/libs/Webtech-projekt-0.0.1-SNAPSHOT.jar app.jar
 
 # Set environment variables for PostgreSQL (optional)
-ENV SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-ctep28rtq21c73bn31og-a.frankfurt-postgres.render.com:5432/booky_db_yktd
-ENV SPRING_DATASOURCE_USERNAME=booky_db_yktd_user
-ENV SPRING_DATASOURCE_PASSWORD=XdafV5rxezyEC9MnFnMkDpNZEicFzyre
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-cu2jkrbv2p9s738v4il0-a.frankfurt-postgres.render.com:5432/books_db_wi0k
+ENV SPRING_DATASOURCE_USERNAME=books_db_wi0k_user
+ENV SPRING_DATASOURCE_PASSWORD=13APyYj82JtInnXtqejooG4jBn5pu1rt
 ENV SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
 
 # Start the application
