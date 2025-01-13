@@ -18,6 +18,7 @@ ENV SPRING_DATASOURCE_USERNAME=books_db_wi0k_user
 ENV SPRING_DATASOURCE_PASSWORD=13APyYj82JtInnXtqejooG4jBn5pu1rt
 ENV SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.postgresql.Driver
 
+
 # Start the application
 ENTRYPOINT ["java","-jar","/app.jar"]
 EXPOSE 8080
