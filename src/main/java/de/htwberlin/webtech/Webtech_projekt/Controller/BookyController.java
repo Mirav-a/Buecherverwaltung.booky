@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/books")
-@CrossOrigin(origins = {"http://localhost:5173/","https://buecherverwaltung-frontend.onrender.com"})
+@CrossOrigin(origins = {"https://buecherverwaltung-frontend.onrender.com"})
 
 public class BookyController {
 
